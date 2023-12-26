@@ -42,48 +42,10 @@
         <div class="col-sm-12">
           <div id="property-single-carousel" class="owl-carousel owl-arrow gallery-property">
             @php
-              $imgs = explode("<img", $data->housedetail->imgs);
-              if($data->type == "efiewura"){
-
-                $srcAttributes = [];
-              
-              foreach ($imgs as $imageTag) {
-                  if (strpos($imageTag, 'src=') !== false) {
-                      $parts = explode('src="', $imageTag);
-                      if (count($parts) > 1) {
-                          $src = explode('"', $parts[1])[0];
-                          $srcAttributes[] = $data->url.substr($src,9);
-                      }
-                  }
-              }
-
-              $count = count($srcAttributes);
-
-              }else{
-                $count = count($imgs);
-              }
-              
-            //  print_r($srcAttributes);
+              $absolutePath = 'https://efiewura.com/';
+            $html = str_replace('../../../', $absolutePath, $data->housedetail->imgs);
             @endphp
-
-
-            @if($data->type == "efiewura")
-
-             @for($i = 0; $i < $count; $i++)
-                <div class="carousel-item-b" style="height: 420px;width: 1920px;">
-                   <img src="{!! $srcAttributes[$i] !!}" alt="">
-                </div>
-             @endfor
-
-            @else
-
-            @for($i = 0; $i < $count; $i++)
-                <div class="carousel-item-b" style="height: 820px;width: 1920px;">
-                   <img src="{{ $imgs[$i] }}" alt="">
-                </div>
-            @endfor
-
-            @endif
+            {!! $html !!}
             
           </div>
           <div class="row justify-content-between">

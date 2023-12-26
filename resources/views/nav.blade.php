@@ -111,6 +111,9 @@
           <li class="nav-item @if(Route::current()->getName() == 'contact') active @endif">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="/admin">Admin</a>
+          </li>
         </ul>
       </div>
       <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"

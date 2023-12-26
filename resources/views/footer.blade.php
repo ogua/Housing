@@ -15,9 +15,9 @@
             <div class="w-footer-a">
               <ul class="list-unstyled">
                 <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@estateagency.com</li>
+                  <span class="color-text-a">Phone .</span> +233 248 129 151</li>
                 <li class="color-a">
-                  <span class="color-text-a">Email .</span> +233 248 129 151</li>
+                  <span class="color-text-a">Email .</span> contact@estateagency.com</li>
               </ul>
             </div>
           </div>
@@ -148,3 +148,8 @@
     </div>
   </e>
   <!--/ Footer End /-->
+  <script>
+    $(document).ready(function(){
+      alert('working');
+    });
+  </script>
